@@ -5,3 +5,11 @@ var factorial = function(number) {
     return factorial(number - 1)*number
   }
 };
+
+$(function() {
+  $("form#factorial").submit(function(event){
+    var number = parseInt($("input#number").val());
+    $("#result").text(factorial(number));
+    event.preventDefault();
+  });
+});
