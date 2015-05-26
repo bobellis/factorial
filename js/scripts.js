@@ -4,10 +4,8 @@ var factorial = function(number) {
   }
 
   var product = 1;
-  var multiplier = 1;
-  while (multiplier <= number) {
+  for (var multiplier = 1; multiplier <= number; multiplier += 1) {
     product *= multiplier;
-    multiplier += 1;
   }
   return product;
 };
